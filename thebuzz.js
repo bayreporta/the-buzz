@@ -45,22 +45,22 @@ var theBuzz = {
 					theBuzz.processed[i] = '<div class="bites" type="text"><div class="bites-time"><p>'+theBuzz.date+'</p></div><div class="bites-text"><p><strong class="bites-hed">'+thisData[i][5]+': </strong>'+thisData[i][6]+'</p><p class="bites-source">- '+thisData[i][7]+'</p></div>'
 					break;
 				case 'Text With Link':
-					theBuzz.processed[i] = '<a onClick="_gaq.push([\'_trackEvent\', \'The Buzz\', \'Click\', \'Link Out\'])" target="_blank" href="'+ thisData[i][9] +'"><div class="bites" type="link"><div class="bites-time"><p>'+theBuzz.date+'</p></div><div class="bites-text"><p><strong class="bites-hed">'+thisData[i][5]+': </strong>'+thisData[i][6]+'</p><p class="bites-source">'+thisData[i][8]+'</p><i class="fa-external-link-square fa"></i></div></a>'
+					theBuzz.processed[i] = '<a target="_blank" href="'+ thisData[i][9] +'"><div class="bites" type="link"><div class="bites-time"><p>'+theBuzz.date+'</p></div><div class="bites-text"><p><strong class="bites-hed">'+thisData[i][5]+': </strong>'+thisData[i][6]+'</p><p class="bites-source">'+thisData[i][8]+'</p><i class="fa-external-link-square fa"></i></div></a>'
 					break;
 				case 'Video':
-					theBuzz.processed[i] = '<a onClick="_gaq.push([\'_trackEvent\', \'The Buzz\', \'Click\', \'Link Out\'])" target="_blank" href="'+ thisData[i][22] +'"><div class="bites" type="link"><div class="bites-time"><p>'+theBuzz.date+'</p></div><div class="bites-text"><p><strong class="bites-hed">'+thisData[i][5]+': </strong>'+thisData[i][6]+'</p><p class="bites-source">'+thisData[i][20]+'</p></div></a>'
+					theBuzz.processed[i] = '<a target="_blank" href="'+ thisData[i][22] +'"><div class="bites" type="link"><div class="bites-time"><p>'+theBuzz.date+'</p></div><div class="bites-text"><p><strong class="bites-hed">'+thisData[i][5]+': </strong>'+thisData[i][6]+'</p><p class="bites-source">'+thisData[i][20]+'</p></div></a>'
 					break;
 				case 'Small Image No Link':
 					theBuzz.processed[i] = '<div class="bites" type="text"><div class="bites-time"><p>'+theBuzz.date+'</p></div><img class="bites-simg" src="'+thisData[i][11]+'"><div class="bites-text"><p><strong class="bites-hed">'+thisData[i][5]+': </strong>'+thisData[i][6]+'</p><p class="bites-source">'+thisData[i][10]+'</p></div>'
 					break;
 				case 'Small Image With Link':
-					theBuzz.processed[i] = '<a onClick="_gaq.push([\'_trackEvent\', \'The Buzz\', \'Click\', \'Link Out\'])" target="_blank" href="'+ thisData[i][14] +'"><div class="bites" type="link"><div class="bites-time"><p>'+theBuzz.date+'</p></div><img class="bites-simg" src="'+thisData[i][13]+'"><div class="bites-text"><p><strong class="bites-hed">'+thisData[i][5]+': </strong>'+thisData[i][6]+'</p><p class="bites-source">'+thisData[i][12]+'</p><i class="fa-external-link-square fa"></i></div></a>'
+					theBuzz.processed[i] = '<a target="_blank" href="'+ thisData[i][14] +'"><div class="bites" type="link"><div class="bites-time"><p>'+theBuzz.date+'</p></div><img class="bites-simg" src="'+thisData[i][13]+'"><div class="bites-text"><p><strong class="bites-hed">'+thisData[i][5]+': </strong>'+thisData[i][6]+'</p><p class="bites-source">'+thisData[i][12]+'</p><i class="fa-external-link-square fa"></i></div></a>'
 					break;
 				case 'Large Image No Link':
 					theBuzz.processed[i] = '<div class="bites" type="text"><div class="bites-time"><p>'+theBuzz.date+'</p></div><img class="bites-limg" src="'+thisData[i][16]+'"><div class="bites-text"><p><strong class="bites-hed">'+thisData[i][5]+': </strong>'+thisData[i][6]+'</p><p class="bites-source">'+thisData[i][15]+'</p></div>'
 					break;
 				case 'Large Image With Link':
-					theBuzz.processed[i] = '<a onClick="_gaq.push([\'_trackEvent\', \'The Buzz\', \'Click\', \'Link Out\'])" target="_blank" href="'+ thisData[i][19] +'"><div class="bites" type="link"><div class="bites-time"><p>'+theBuzz.date+'</p></div><img class="bites-limg" src="'+thisData[i][18]+'"><div class="bites-text"><p><strong class="bites-hed">'+thisData[i][5]+': </strong>'+thisData[i][6]+'</p><p class="bites-source">'+thisData[i][17]+'</p><i class="fa-external-link-square fa"></i></div></a>'
+					theBuzz.processed[i] = '<a target="_blank" href="'+ thisData[i][19] +'"><div class="bites" type="link"><div class="bites-time"><p>'+theBuzz.date+'</p></div><img class="bites-limg" src="'+thisData[i][18]+'"><div class="bites-text"><p><strong class="bites-hed">'+thisData[i][5]+': </strong>'+thisData[i][6]+'</p><p class="bites-source">'+thisData[i][17]+'</p><i class="fa-external-link-square fa"></i></div></a>'
 					break;
 			}
 		}
@@ -109,4 +109,9 @@ $(document).ready(function(){
 	                 wanted: ["main"],
 					 proxy: "https://s3.amazonaws.com/edsource-the-buzz",
 	                 debug: true } );
+
+
+
 });
+
+

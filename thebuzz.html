@@ -7,22 +7,30 @@
 	<link rel="stylesheet" type="text/css" href="http://edsource.org/wp-content/iframe/thebuzz/thebuzz.css">
 </head>
 <body>
-	<div id="bites-contain" onScroll="_gaq.push(['_trackEvent', 'The Buzz', 'Interaction', 'Used'])"><div id="bites" onScroll="_gaq.push(['_trackEvent', 'The Buzz', 'Interaction', 'Used'])"></div></div>	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<div id="bites-contain"><div id="bites"></div></div>	
+	<script src="http://edsource.org/wp-content/js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="http://edsource.org/wp-content/js/tabletop.js"></script>
 	<script type="text/javascript" src="http://edsource.org/wp-content/iframe/thebuzz/thebuzz.js"></script>
 	<script>
-		var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-3051201-4']);
-	_gaq.push(['_trackPageview']);
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-3051201-4', 'auto');
-	  //ga('send', 'pageview');
+		  ga('create', 'UA-3051201-4', 'auto');
+		  ga('send', 'pageview');
+	</script>
 
+	<script>
+		window.onload = function(){
+			$('#bites-contain a').on('click', function() {
+		 	 	ga('send', 'event', 'buzz', 'click', 'link');
+			});
+
+			$('#bites').on('scroll', function() {
+		  		ga('send', 'event', 'buzz', 'scrolling', 'interaction');
+			});
+		}
 	</script>
 
 </body>
